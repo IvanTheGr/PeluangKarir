@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register - RuangKerja</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">RuangKerja</div>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <div class="auth-form" id="login-form">
+                <h1>Sign In</h1>
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" placeholder="Masukkan email" />
+                
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" placeholder="Masukkan password" />
+                
+                <button id="login-btn">Login</button>
+                <p>Belum punya akun? <a href="#" onclick="showRegister()">Daftar</a></p>
+            </div>
+
+            <div class="auth-form hidden" id="register-form">
+                <h1>Register</h1>
+                <label for="register-name">Nama:</label>
+                <input type="text" id="register-name" placeholder="Masukkan nama" />
+                
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" placeholder="Masukkan email" />
+                
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" placeholder="Masukkan password" />
+                
+                <label for="register-password">Confirm Password:</label>
+                <input type="password" id="Confirm-password" placeholder="Masukkan password" />
+
+                <button id="register-btn">Register</button>
+                <p>Sudah punya akun? <a href="#" onclick="showLogin()">Masuk</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 RuangKerja. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showRegister() {
+            document.getElementById("login-form").classList.add("hidden");
+            document.getElementById("register-form").classList.remove("hidden");
+        }
+
+        function showLogin() {
+            document.getElementById("register-form").classList.add("hidden");
+            document.getElementById("login-form").classList.remove("hidden");
+        }
+
+        document.getElementById("login-btn").addEventListener("click", function () {
+            alert("Login berhasil!");
+        });
+
+        document.getElementById("register-btn").addEventListener("click", function () {
+            alert("Akun berhasil didaftarkan!");
+        });
+        document.getElementById("register-btn").addEventListener("click", function () {
+        let password = document.getElementById("register-password").value;
+        let confirmPassword = document.getElementById("Confirm-password").value;
+
+        if (password === "" || confirmPassword === "") {
+            alert("Password dan konfirmasi password tidak boleh kosong!");
+        return;
+        }
+
+        if (password !== confirmPassword) {
+            alert("Password dan konfirmasi password tidak cocok!");
+        return;
+        }
+
+        alert("Akun berhasil didaftarkan!");
+});
+
+    </script>
+
+    <style>
+        .hidden { display: none; }
+        .auth-container { text-align: center; padding: 50px; }
+        .auth-form { max-width: 400px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+        .auth-form input { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+        .auth-form button { width: 100%; padding: 10px; background: #4A90E2; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .auth-form button:hover { background: #357ABD; }
+    </style>
+
+</body>
+</html>

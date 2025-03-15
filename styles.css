@@ -1,0 +1,913 @@
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #f5f5f5;
+    --dark-bg: #534e4e;
+    --light-bg: #ffffff;
+    --text-light: #333;
+    --text-dark: #ccc;
+}
+
+
+/* Dark Mode */
+.dark-mode {
+    background: var(--dark-bg);
+    color: var(--text-dark);
+}
+
+/* Dark Mode for Header */
+.dark-mode header {
+    background: linear-gradient(45deg, #534e4e, #464343);
+}
+
+/* Dark Mode for Job Cards */
+.dark-mode .job-card {
+    background: #333;
+    color: white;
+}
+
+/* Dark Mode for Footer */
+.dark-mode footer {
+    background: #534e4e;
+    color: white;
+}
+
+/* Dark Mode for Buttons */
+.dark-mode .btn {
+    background: #534e4e;
+    color: white;
+}
+
+/* Dark Mode for Chat Messages */
+.dark-mode .chatbox {
+    background: #534e4e;
+}
+
+.dark-mode #chat-messages .message {
+    background: #534e4e;
+    color: white;
+}
+
+/* Button Styling */
+#toggle-mode {
+    right: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    padding: 5px;
+    color: inherit;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    left: 0;
+    right: 0;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, var(--primary-color), #87CEFA);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 70px;
+}
+
+header nav {
+    margin-left: auto; 
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end; 
+    padding-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid white;
+}
+
+.auth-buttons button {
+    background: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggle-mode {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.dashboard {
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    padding: 20px;
+}
+.field{
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.input input{
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.stats .card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Job Categories */
+.job-categories {
+    display: flex;
+    gap: 20px;
+}
+
+.job-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+    transform: scale(1.05);
+}
+
+.job-card img {
+    width: 50px;
+    height: 50px;
+}
+
+.featured-jobs {
+    margin-top: 20px;
+    background: white;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-list .job-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.categories span {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+#generate-resume {
+    padding: 12px;
+    background: #0073e6;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary-color);
+    color: white;
+}
+
+.courses h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.filter-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 57px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #0056b3;
+}
+
+.course-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.course {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.course h2 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+}
+
+.forum h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+.forum-filters {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.filter-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 57px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #0056b3;
+}
+
+.forum-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.forum-thread {
+    background: white;
+    padding: 20px;
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.forum-thread h2 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+}
+
+.forum-thread p {
+    color: gray;
+    font-size: 14px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    min-height: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.job-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.filter-dropdown {
+    padding: 10px;
+    border-radius: 57px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+}
+
+.job-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.job {
+    background: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.job img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.box{
+    background-color: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.box h1, .box h2 {
+    color: #4A90E2;
+    margin-bottom: 10px;
+}
+
+/* Style for the preformatted text */
+.box pre {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre-wrap; /* Wrap text */
+    word-wrap: break-word; /* Break long words */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #333;
+}
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+main{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+.main-box{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.main-box .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.middle{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.bottom{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btn{
+    height: 20px;
+    background: transparent;
+    border: 0;
+    border-radius: 5px;
+    color:white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 0;
+    padding: 0px 10px;
+    justify-content: right;
+}
+
+.btn1{
+    height: 40px;
+    border: 0;
+    color:white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 0;
+    justify-content: right;
+    padding: 15px 5px;
+    background: linear-gradient(45deg, var(--primary-color), #87CEFA);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 70px;
+}
+.btn:hover{
+    opacity: 0.82;
+}
+
+
+.form-box header{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 10px;
+    color: white;
+    
+}
+.form-box form .field{
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+
+}
+.form-box form .input input{
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.bton{
+    height: 35px;
+    background: linear-gradient(45deg, var(--primary-color), #87CEFA);
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 10px;
+    padding: 0px 10px;
+}
+.btn:hover{
+    opacity: 0.82;
+}
+
+/* Profil Container */
+.profile {
+    text-align: center;
+}
+
+/* Informasi Dasar */
+.profile-info, 
+.profile-about, 
+.profile-education, 
+.profile-certifications, 
+.profile-work, 
+.profile-awards, 
+.profile-competitions, 
+.profile-tools, 
+.profile-languages, 
+.profile-papers {
+    background: white;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Profile Image */
+.profile-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.profile-pic-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #0073e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 120px; /* Adjust this value for better positioning */
+    right: 50px; /* Moves it to the right */
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .main-box .top{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .top .box {
+        margin: 10px 10px;
+    }
+    
+    .bottom {
+        margin-top: 0;
+    }
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .profile-pic-container {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: 0 auto 20px;
+    }
+}
+
+/* Tombol Resume */
+#download-resume {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#download-resume:hover {
+    background: #005bb5;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+    }
+
+    .profile-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin-bottom: 20px;
+    }
+}
+
+.career-coach{
+    padding-top: 80px;
+}
+
+/* Career Coach - Chatbox */
+.career-coach {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+}
+
+.career-coach h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.career-coach p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Chatbox Styling */
+.chatbox {
+    width: 60%;
+    max-width: 800px;
+    height: 500px;
+    background: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin: 20px auto;
+}
+
+/* Chat Messages */
+#chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* User & AI Messages */
+.message {
+    padding: 12px;
+    border-radius: 12px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    align-self: flex-end;
+    background: #0073e6;
+    color: white;
+}
+
+.ai-message {
+    align-self: flex-start;
+    background: #e0e0e0;
+    color: black;
+}
+
+/* Chat Input */
+#chat-input {
+    width: calc(100% - 90px);
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+#send-btn {
+    width: 80px;
+    padding: 12px;
+    border: none;
+    background: #0073e6;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#send-btn:hover {
+    background: #005bb5;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .chatbox {
+        width: 90%;
+        height: 450px;
+    }
+
+    #chat-input {
+        width: calc(100% - 85px);
+    }
+}
+
+/* Resume AI - Layout */
+.resume-ai {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+}
+
+/* Title & Description */
+.resume-ai h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.resume-ai p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Rectangle Form */
+.resume-box {
+    width: 60%;
+    max-width: 800px;
+    background: #f9f9f9;
+    border-radius: 50px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Labels */
+.resume-box label {
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Input Fields */
+.resume-box input,
+.resume-box textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/* Textarea */
+.resume-box textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Button */
+#generate-resume {
+    padding: 12px;
+    background: #0073e6;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#generate-resume:hover {
+    background: #005bb5;
+}
+
+/* Resume Result Styling */
+.resume-result {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    text-align: left;
+}
+
+.resume-result h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.resume-result p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.resume-result .section {
+    margin-bottom: 20px;
+}
+
+.resume-result .section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.resume-result .section-content {
+    padding-left: 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .resume-box {
+        width: 90%;
+    }
+}
+
+/* Card Layout */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.profile-data {
+    margin-bottom: 20px;
+}
+
+.profile-data p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#result {
+    margin-bottom: 20px;
+}
+
+.btn-print {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-print:hover {
+    background-color: #0056b3;
+}
+
+/* Chart.js */
+canvas {
+    margin: 20px auto;
+    display: block;
+}
+
